@@ -1,189 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-  </head>
-  <body>
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Listado</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="registroNiños.html">Registro Niños</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-    <div class="container">
-      <h2 class="text-center mb-5">Registro de infantes</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <div
-            class="form-box d-flex flex-column justify-content-between h-100"
-          >
-            <h3 class="form-title">Datos del Niñ@</h3>
-            <form class="d-flex flex-column justify-content-between h-100">
-              <div>
-                <div class="form-group">
-                  <label for="nombresNino">Nombres</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nombresNino"
-                    placeholder="Nombres"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="apellidoPaternoNino">Apellido Paterno</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="apellidoPaternoNino"
-                    placeholder="Apellido Paterno"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="apellidoMaternoNino">Apellido Materno</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="apellidoMaternoNino"
-                    placeholder="Apellido Materno"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="fechaNacimientoNino">Fecha de Nacimiento</label>
-                  <div class="input-group">
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="fechaNacimientoNino"
-                    />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="certificadoNacimientoNino"
-                    >N° Certificado de nacimiento</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="certificadoNacimientoNino"
-                    placeholder="N° Certificado de nacimiento"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="ciNino">N° Carnet de Identidad</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="ciNino"
-                    placeholder="N° Carnet de Identidad"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="fechaRegistroNino">Fecha Registro</label>
-                  <div class="input-group">
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="fechaRegistroNino"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-primary">Registrar</button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div
-            class="form-box d-flex flex-column justify-content-between h-100"
-          >
-            <h3 class="form-title">Datos del Responsable</h3>
-            <form class="d-flex flex-column justify-content-between h-100">
-              <div>
-                <div class="form-group">
-                  <label for="ciResponsable">N° de Carnet de Identidad</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="ciResponsable"
-                    placeholder="N° de Carnet de Identidad"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="nombresResponsable">Nombres</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nombresResponsable"
-                    placeholder="Nombres"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="apellidoPaternoResponsable"
-                    >Apellido Paterno</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="apellidoPaternoResponsable"
-                    placeholder="Apellido Paterno"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="apellidoMaternoResponsable"
-                    >Apellido Materno</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="apellidoMaternoResponsable"
-                    placeholder="Apellido Materno"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="celularResponsable">N° de celular</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="celularResponsable"
-                    placeholder="N° de celular"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="parentescoResponsable">Parentesco</label>
-                  <select class="form-control" id="parentescoResponsable">
-                    <option>Padre/Madre</option>
-                    <option>Tío/Tía</option>
-                    <option>Abuelo/Abuela</option>
-                    <option>Otro</option>
-                  </select>
-                </div>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-primary">Registrar</button>
-              </div>
-            </form>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div class="wrapper">
+    <aside id="sidebar">
+      <div class="d-flex">
+        <button class="toggle-btn" type="button">
+          <i class="lni lni-grid-alt"></i>
+        </button>
+        <div class="sidebar-logo">
+          <a href="#">CARTI-</a>
         </div>
       </div>
-    </div>
+      <li class="sidebar-item">
+        <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#auth"
+          aria-expanded="false" aria-controls="auth">
+          <i class="lni lni-protection"></i>
+          <span>Infantes</span>
+        </a>
+        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+          <li class="sidebar-item">
+            <a href="index.html" class="sidebar-link">Listado</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="registroNiños.html" class="sidebar-link">Registro</a>
+          </li>
+        </ul>
+      </li>
+      <ul class="sidebar-nav">
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <i class="lni lni-user"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <i class="lni lni-agenda"></i>
+            <span>Task</span>
+          </a>
+        </li>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+
+      </ul>
+      <div class="sidebar-footer">
+        <a href="#" class="sidebar-link">
+          <i class="lni lni-exit"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+    <div class="main p-3">
+      <div class="text-center">
+        <h1>
+          Registro
+        </h1>
+        <!-- formulario -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-box d-flex flex-column justify-content-between h-100">
+                <h3 class="form-title">Datos del niño</h3>
+                <form class="d-flex flex-column justify-content-between h-100">
+                  <div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="nombresNino" placeholder="Nombres" />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="apellidoPaternoNino" placeholder="Apellido Paterno" />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="apellidoMaternoNino" placeholder="Apellido Materno" />
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input type="date" class="form-control" id="fechaNacimientoNino" />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="certificadoNacimientoNino"
+                        placeholder="N° Certificado de nacimiento" />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="ciNino" placeholder="N° Carnet de Identidad" />
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input type="date" class="form-control" id="fechaRegistroNino" />
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-box d-flex flex-column justify-content-between h-100">
+                <h3 class="form-title">Datos del Responsable</h3>
+                <form class="d-flex flex-column justify-content-between h-100">
+                  <div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="ciResponsable"
+                        placeholder="N° de Carnet de Identidad" />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="nombresResponsable" placeholder="Nombres" />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="apellidoPaternoResponsable"
+                        placeholder="Apellido Paterno" />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="apellidoMaternoResponsable"
+                        placeholder="Apellido Materno" />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="celularResponsable" placeholder="N° de celular" />
+                    </div>
+                    <div class="form-group">
+                      <select class="form-control" id="parentescoResponsable">
+                        <option>Padre/Madre</option>
+                        <option>Tío/Tía</option>
+                        <option>Abuelo/Abuela</option>
+                        <option>Otro</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Registrar</button>
+        </div>
+
+        <!-- formulario -->
+      </div>
+    </div>
+  </div>
+  <!-- Fin code sidebar -->
+
+
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="js/script.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

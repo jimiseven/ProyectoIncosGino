@@ -7,11 +7,12 @@ $sql = "SELECT first_name, last_name_father, last_name_mother, birth_date FROM c
 $result = $conn->query($sql);
 
 // Función para calcular la edad en meses
-function calcularEdadEnMeses($fechaNacimiento) {
-    $fechaActual = new DateTime();
-    $fechaNacimiento = new DateTime($fechaNacimiento);
-    $diferencia = $fechaActual->diff($fechaNacimiento);
-    return ($diferencia->y * 12) + $diferencia->m;
+function calcularEdadEnMeses($fechaNacimiento)
+{
+  $fechaActual = new DateTime();
+  $fechaNacimiento = new DateTime($fechaNacimiento);
+  $diferencia = $fechaActual->diff($fechaNacimiento);
+  return ($diferencia->y * 12) + $diferencia->m;
 }
 
 ?>
@@ -82,6 +83,7 @@ function calcularEdadEnMeses($fechaNacimiento) {
     <div class="main p-3">
       <div class="text-center">
         <h1>
+          Listado de Infantes
           <div class="container mt-5">
             <!-- Barra de búsqueda -->
             <div class="d-flex justify-content-end mb-3">
@@ -92,7 +94,7 @@ function calcularEdadEnMeses($fechaNacimiento) {
                 </form>
               </nav>
             </div>
-        
+
             <!-- Tabla de niños -->
             <table class="table">
               <thead class="thead-dark">
@@ -104,21 +106,25 @@ function calcularEdadEnMeses($fechaNacimiento) {
               <tbody id="tableBody">
                 <?php
                 if ($result->num_rows > 0) {
-                    // Iterar a través de los resultados y llenar la tabla
-                    while($row = $result->fetch_assoc()) {
-                        $nombreCompleto = $row['first_name'] . ' ' . $row['last_name_father'] . ' ' . $row['last_name_mother'];
-                        $edadEnMeses = calcularEdadEnMeses($row['birth_date']);
-                        echo "<tr>
+                  // Iterar a través de los resultados y llenar la tabla
+                  while ($row = $result->fetch_assoc()) {
+                    $nombreCompleto = $row['first_name'] . ' ' . $row['last_name_father'] . ' ' . $row['last_name_mother'];
+                    $edadEnMeses = calcularEdadEnMeses($row['birth_date']);
+                    echo "<tr>
                                 <th scope='row'>$nombreCompleto</th>
                                 <td>$edadEnMeses</td>
                               </tr>";
-                    }
+                  }
                 } else {
-                    echo "<tr><td colspan='2'>No se encontraron registros</td></tr>";
+                  echo "<tr><td colspan='2'>No se encontraron registros</td></tr>";
                 }
                 ?>
               </tbody>
             </table>
+            <br>
+            <a class="btn btn-primary" data-toggle="collapse" href="registroNiños.html" role="button" aria-expanded="false" aria-controls="collapseExample">
+              Registrar
+            </a>
           </div>
         </h1>
       </div>
@@ -132,7 +138,7 @@ function calcularEdadEnMeses($fechaNacimiento) {
       event.preventDefault();
       var searchInput = document.getElementById('searchInput').value.toLowerCase();
       var tableRows = document.querySelectorAll('#tableBody tr');
-      
+
       tableRows.forEach(function(row) {
         var rowData = row.querySelector('th').textContent.toLowerCase();
         if (rowData.includes(searchInput)) {
